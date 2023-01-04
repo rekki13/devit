@@ -1,0 +1,28 @@
+{
+	"apiVersion": 2,
+	"name": "devit/accordion",
+	"version": "0.0.1",
+	"title": "DevIT Accordion",
+	"category": "DevIT",
+	"icon": "buddicons-activity",
+	"supports": {
+		"html": false
+	},
+	"example": {
+		"attributes": {
+			"title": "Accordion",
+			"default":"Accordion title"
+
+		}
+	},
+	"attributes":{
+		"title": {
+			"type": "string",
+			"default":"Accordion title"
+		}
+	},
+	"textdomain": "devit",
+	"editorScript": "file:../../../build/accordion.js",
+	"editorStyle": "file:../../../build/accordion.css",
+	"style": "file:../../../build/style-accordion.css"
+}

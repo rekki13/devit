@@ -1,0 +1,14 @@
+{
+	"name": "devit-plugin-blocks",
+	"version": "0.0.1",
+	"main": "build/index.js",
+	"author": "ReKKi13",
+	"license": "GPL-2.0-or-later",
+	"scripts": {
+		"build": "wp-scripts build",
+		"start": "wp-scripts start"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^18.1.0"
+	}
+}
