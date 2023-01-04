@@ -1,26 +1,31 @@
 {
-	"apiVersion": 2,
-	"name": "devit/accordion-item",
-	"version": "0.0.1",
-	"title": "DevIT Accordion Item",
-	"category": "DevIT",
-	"icon": "buddicons-replies",
-	"parent": [ "devit/accordion" ],
-	"supports": {
-		"html": false
-	},
-	"attributes":{
-		"title": {
-			"type": "string",
-			"default":"Accordion item title"
-		},
-		"content": {
-			"type": "string",
-			"default":"Accordion item content"
-		}
-	},
-	"textdomain": "devit",
-	"editorScript": "file:../../../build/accordion-item.js",
-	"editorStyle": "file:../../../build/accordion-item.css",
-	"style": "file:../../../build/style-accordion-item.css"
+  "apiVersion": 2,
+  "name": "devit/accordion-item",
+  "version": "0.0.1",
+  "title": "DevIT Accordion Item",
+  "category": "DevIT",
+  "icon": "buddicons-replies",
+  "parent": [
+    "devit/accordion"
+  ],
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Accordion item title"
+    },
+    "content": {
+      "type": "string",
+      "default": "Accordion item content"
+    },
+    "blockId": {
+      "type": "string"
+    }
+  },
+  "textdomain": "devit",
+  "editorScript": "file:../../../build/accordion-item.js",
+  "editorStyle": "file:../../../build/accordion-item.css",
+  "style": "file:../../../build/style-accordion-item.css"
 }

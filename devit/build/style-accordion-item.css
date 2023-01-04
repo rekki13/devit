@@ -1,6 +1,15 @@
 /*!*************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/accordion-item/style.scss ***!
   \*************************************************************************************************************************************************************************************************************************************************************/
+.accordionItem button {
+  background-color: unset !important;
+  border: unset !important;
+  width: 100%;
+  padding: 0 !important;
+}
+.accordionItem button:focus {
+  outline: unset !important;
+}
 .accordionItem__counter {
   font-weight: 700;
   font-size: 48px;

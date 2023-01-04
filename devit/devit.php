@@ -58,17 +58,24 @@ function render_accordion_block( $attributes, $inner_block_content, $block ) {
 function render_accordion_item_block( $attributes, $content, $block ) {
 	$title   = isset( $attributes['title'] ) ? $attributes['title'] : '';
 	$content = isset( $attributes['content'] ) ? $attributes['content'] : '';
-	$icon    = plugin_dir_url( __FILE__ ) . 'assets/icons/cross.svg';
 	ob_start();
+	$blockId = $attributes['blockId'];
+
 	?>
-    <div class="accordionItem">
+    <div class="accordionItem ">
         <h4 class="accordionItem__counter"></h4>
         <div class="accordionItem__content">
-            <div class="accordionItem__content-header">
-                <h4 class="accordionItem__content-title"><?php echo esc_html( $title ); ?></h4>
-                <div class="accordionItem__cross"></div>
-            </div>
-            <div class="accordionItem__content-text">
+            <button id="accordion-header-<?= $attributes['blockId'] ?>"
+                    data-aria-expanded="true"
+                    data-aria-controls="accordion-<?= $attributes['blockId'] ?>">
+                <div class="accordionItem__content-header">
+                    <h4 class="accordionItem__content-title"><?php echo esc_html( $title ); ?></h4>
+                    <div class="accordionItem__cross"></div>
+                </div>
+            </button>
+            <div class="accordionItem__content-text"
+                 id="accordion-<?= $attributes['blockId'] ?>"
+                 data-aria-labelledby="accordion-header-<?= $attributes['blockId'] ?>">
                 <p><?php echo wp_kses_post( $content ); ?></p>
             </div>
         </div>

@@ -1,4 +1,13 @@
 .accordionItem {
+  button{
+    background-color: unset!important;
+    border:unset!important;
+    width: 100%;
+    padding: 0!important;
+    &:focus{
+      outline: unset!important;
+    }
+  }
   &__counter {
 
     font-weight: 700;
