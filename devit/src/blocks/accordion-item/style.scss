@@ -1,13 +1,18 @@
 .accordionItem {
   &__counter {
 
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 700;
     font-size: 48px;
     line-height: 120%;
     letter-spacing: 0.25px;
     color: rgba(60, 60, 67, 0.5);
+    @media screen and (max-width: 1200px) {
+      font-size: 32px;
+    }
+    @media screen and (max-width: 767px) {
+      flex: 100%;
+      margin-bottom: 11px;
+    }
 
     &:before {
       counter-increment: accordionNum;
@@ -18,10 +23,13 @@
   &__content {
     flex: 1;
 
-    &-title {
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 16px;
+    }
 
-      font-family: 'Inter';
-      font-style: normal;
+    &-title {
       font-weight: 700;
       font-size: 32px;
       line-height: 120%;
@@ -30,19 +38,30 @@
       color: #000000;
       margin: 0;
       margin-bottom: 34px;
+      @media screen and (max-width: 1200px) {
+        font-size: 28px;
+        margin-bottom: 26px;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
     }
 
     &-text {
 
-      overflow: hidden;
-      transition: all ease-in-out 3s;
-      font-family: 'Inter';
-      font-style: normal;
       font-weight: 400;
       font-size: 20px;
       line-height: 140%;
       color: rgba(60, 60, 67, 0.85);
       max-height: 0;
+
+      overflow: hidden;
+      transition: max-height ease-in-out 3s;
+      @media screen and (max-width: 1200px) {
+        font-size: 18px;
+      }
+
     }
   }
 
@@ -50,12 +69,18 @@
   &__cross {
     max-width: 48px;
     max-height: 48px;
+    @media screen and (max-width: 1200px) {
+      max-width: 40px;
+      max-height: 40px;
+    }
+    @media screen and (max-width: 767px) {
+      max-width: 32px;
+      max-height: 32px;
+    }
     content: url("~/assets/img/cross.png");
   }
 
   &.accordion-open {
-    transition: all ease-in-out 3s;
-
     .accordionItem__content-text {
       max-height: 999px;
     }

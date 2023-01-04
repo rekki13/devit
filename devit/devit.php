@@ -64,13 +64,14 @@ function render_accordion_item_block( $attributes, $content, $block ) {
     <div class="accordionItem">
         <h4 class="accordionItem__counter"></h4>
         <div class="accordionItem__content">
-
-            <h4 class="accordionItem__content-title"><?php echo esc_html( $title ); ?></h4>
+            <div class="accordionItem__content-header">
+                <h4 class="accordionItem__content-title"><?php echo esc_html( $title ); ?></h4>
+                <div class="accordionItem__cross"></div>
+            </div>
             <div class="accordionItem__content-text">
                 <p><?php echo wp_kses_post( $content ); ?></p>
             </div>
         </div>
-        <div class="accordionItem__cross"></div>
 
     </div>
 

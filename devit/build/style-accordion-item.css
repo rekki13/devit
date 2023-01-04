@@ -2,13 +2,22 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/accordion-item/style.scss ***!
   \*************************************************************************************************************************************************************************************************************************************************************/
 .accordionItem__counter {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 700;
   font-size: 48px;
   line-height: 120%;
   letter-spacing: 0.25px;
   color: rgba(60, 60, 67, 0.5);
+}
+@media screen and (max-width: 1200px) {
+  .accordionItem__counter {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .accordionItem__counter {
+    flex: 100%;
+    margin-bottom: 11px;
+  }
 }
 .accordionItem__counter:before {
   counter-increment: accordionNum;
@@ -17,9 +26,13 @@
 .accordionItem__content {
   flex: 1;
 }
+.accordionItem__content-header {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
 .accordionItem__content-title {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 120%;
@@ -29,24 +42,48 @@
   margin: 0;
   margin-bottom: 34px;
 }
+@media screen and (max-width: 1200px) {
+  .accordionItem__content-title {
+    font-size: 28px;
+    margin-bottom: 26px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .accordionItem__content-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+}
 .accordionItem__content-text {
-  overflow: hidden;
-  transition: all ease-in-out 3s;
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 140%;
   color: rgba(60, 60, 67, 0.85);
   max-height: 0;
+  overflow: hidden;
+  transition: max-height ease-in-out 3s;
+}
+@media screen and (max-width: 1200px) {
+  .accordionItem__content-text {
+    font-size: 18px;
+  }
 }
 .accordionItem__cross {
   max-width: 48px;
   max-height: 48px;
   content: url(images/cross.6fbadfa8.png);
 }
-.accordionItem.accordion-open {
-  transition: all ease-in-out 3s;
+@media screen and (max-width: 1200px) {
+  .accordionItem__cross {
+    max-width: 40px;
+    max-height: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .accordionItem__cross {
+    max-width: 32px;
+    max-height: 32px;
+  }
 }
 .accordionItem.accordion-open .accordionItem__content-text {
   max-height: 999px;

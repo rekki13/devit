@@ -1,6 +1,6 @@
 
 .accordion-wrapper {
-  max-width: 1140px!important;
+  max-width: 1440px!important;
   width: 100%;
   counter-reset: accordionNum; /* Set a counter named 'section', and its initial value is 0. */
 
@@ -10,14 +10,35 @@
     border-radius: 20px;
     padding: 64px 130px;
 
-    .accordionItem {
-      display: flex;
+    @media screen and (max-width: 1200px) {
+      padding: 40px;
+    }
+    @media screen and (max-width: 767px) {
+      padding: 32px 16px;
+
+    }
+      .accordionItem {
+      * {
+        font-family: 'Inter';
+        font-style: normal;
+      }    max-width: 1180px!important;
+
+
+
+        display: flex;
       padding: 52px 60px;
       column-gap: 50px;
       background: #FFFFFF;
       margin-bottom: 3px;
+      @media screen and (max-width: 1200px) {
+        column-gap: 32px;
+        padding: 41px 32px;
 
-      &:last-of-type {
+      }
+      @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+      }
+        &:last-of-type {
         margin-bottom: 0;
       }
     }
