@@ -1,4 +1,58 @@
 /*!*************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/accordion-item/style.scss ***!
   \*************************************************************************************************************************************************************************************************************************************************************/
+.accordionItem__counter {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  color: rgba(60, 60, 67, 0.5);
+}
+.accordionItem__counter:before {
+  counter-increment: accordionNum;
+  content: counter(accordionNum, decimal-leading-zero);
+}
+.accordionItem__content {
+  flex: 1;
+}
+.accordionItem__content-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 34px;
+}
+.accordionItem__content-text {
+  overflow: hidden;
+  transition: all ease-in-out 3s;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: rgba(60, 60, 67, 0.85);
+  max-height: 0;
+}
+.accordionItem__cross {
+  max-width: 48px;
+  max-height: 48px;
+  content: url(images/cross.6fbadfa8.png);
+}
+.accordionItem.accordion-open {
+  transition: all ease-in-out 3s;
+}
+.accordionItem.accordion-open .accordionItem__content-text {
+  max-height: 999px;
+}
+.accordionItem.accordion-open .accordionItem__cross {
+  content: url(images/cross-open.e79eef6f.png);
+}
 
+/*# sourceMappingURL=style-accordion-item.css.map*/

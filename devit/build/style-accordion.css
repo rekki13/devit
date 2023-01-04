@@ -1,4 +1,26 @@
 /*!********************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/accordion/style.scss ***!
   \********************************************************************************************************************************************************************************************************************************************************/
+.accordion-wrapper {
+  max-width: 1140px !important;
+  width: 100%;
+  counter-reset: accordionNum; /* Set a counter named 'section', and its initial value is 0. */
+}
+.accordion-wrapper .accordionBody {
+  background: #F3F5F6;
+  border-radius: 20px;
+  padding: 64px 130px;
+}
+.accordion-wrapper .accordionBody .accordionItem {
+  display: flex;
+  padding: 52px 60px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  background: #FFFFFF;
+  margin-bottom: 3px;
+}
+.accordion-wrapper .accordionBody .accordionItem:last-of-type {
+  margin-bottom: 0;
+}
 
+/*# sourceMappingURL=style-accordion.css.map*/

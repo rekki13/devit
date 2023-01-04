@@ -32,18 +32,20 @@ function Edit(_ref) {
     },
     isSelected
   } = _ref;
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (isSelected || title) && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
+    className: "accordionItem"
+  }), (isSelected || title) && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     tagName: "h4",
     value: title,
     allowedFormats: [],
-    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Item title', 'devit'),
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Accordion item title', 'devit'),
     onChange: newTitle => setAttributes({
       title: newTitle
     })
   }), isSelected && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     tagName: "p",
     value: content,
-    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Item content', 'devit'),
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Accordion item content', 'devit'),
     onChange: newContent => setAttributes({
       content: newContent
     })
@@ -150,7 +152,7 @@ module.exports = window["wp"]["i18n"];
   \**********************************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"apiVersion":2,"name":"devit/accordion-item","version":"0.0.1","title":"DevIT Accordion Item","category":"DevIT","icon":"buddicons-replies","description":"","parent":["devit/accordion"],"supports":{"html":false},"attributes":{"title":{"type":"string","default":"Accordion item title"},"content":{"type":"string","default":"Accordion item content"}},"textdomain":"oct-14-2021","editorScript":"file:../../../build/accordion-item.js","editorStyle":"file:../../../build/accordion-item.css","style":"file:../../../build/style-accordion-item.css"}');
+module.exports = JSON.parse('{"apiVersion":2,"name":"devit/accordion-item","version":"0.0.1","title":"DevIT Accordion Item","category":"DevIT","icon":"buddicons-replies","parent":["devit/accordion"],"supports":{"html":false},"attributes":{"title":{"type":"string","default":"Accordion item title"},"content":{"type":"string","default":"Accordion item content"}},"textdomain":"devit","editorScript":"file:../../../build/accordion-item.js","editorStyle":"file:../../../build/accordion-item.css","style":"file:../../../build/style-accordion-item.css"}');
 
 /***/ })
 

@@ -1,0 +1,27 @@
+
+.accordion-wrapper {
+  max-width: 1140px!important;
+  width: 100%;
+  counter-reset: accordionNum; /* Set a counter named 'section', and its initial value is 0. */
+
+
+  .accordionBody {
+    background: #F3F5F6;
+    border-radius: 20px;
+    padding: 64px 130px;
+
+    .accordionItem {
+      display: flex;
+      padding: 52px 60px;
+      column-gap: 50px;
+      background: #FFFFFF;
+      margin-bottom: 3px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+
+}

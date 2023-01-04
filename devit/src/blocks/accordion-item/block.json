@@ -5,7 +5,6 @@
 	"title": "DevIT Accordion Item",
 	"category": "DevIT",
 	"icon": "buddicons-replies",
-	"description": "",
 	"parent": [ "devit/accordion" ],
 	"supports": {
 		"html": false
@@ -20,7 +19,7 @@
 			"default":"Accordion item content"
 		}
 	},
-	"textdomain": "oct-14-2021",
+	"textdomain": "devit",
 	"editorScript": "file:../../../build/accordion-item.js",
 	"editorStyle": "file:../../../build/accordion-item.css",
 	"style": "file:../../../build/style-accordion-item.css"

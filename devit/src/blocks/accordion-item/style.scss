@@ -1,0 +1,68 @@
+.accordionItem {
+  &__counter {
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: 0.25px;
+    color: rgba(60, 60, 67, 0.5);
+
+    &:before {
+      counter-increment: accordionNum;
+      content: counter(accordionNum, decimal-leading-zero);
+    }
+  }
+
+  &__content {
+    flex: 1;
+
+    &-title {
+
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 120%;
+      display: flex;
+      align-items: center;
+      color: #000000;
+      margin: 0;
+      margin-bottom: 34px;
+    }
+
+    &-text {
+
+      overflow: hidden;
+      transition: all ease-in-out 3s;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 140%;
+      color: rgba(60, 60, 67, 0.85);
+      max-height: 0;
+    }
+  }
+
+
+  &__cross {
+    max-width: 48px;
+    max-height: 48px;
+    content: url("~/assets/img/cross.png");
+  }
+
+  &.accordion-open {
+    transition: all ease-in-out 3s;
+
+    .accordionItem__content-text {
+      max-height: 999px;
+    }
+
+    .accordionItem__cross {
+      content: url("~/assets/img/cross-open.png");
+
+    }
+  }
+}

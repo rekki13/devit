@@ -10,13 +10,13 @@ export default function Edit({
 	isSelected,
 }) {
 	return (
-		<li {...useBlockProps()}>
+		<div {...useBlockProps({className: "accordionItem"})}>
 			{(isSelected || title) && (
 				<RichText
 					tagName="h4"
 					value={title}
 					allowedFormats={[]}
-					placeholder={__('Item title', 'devit')}
+					placeholder={__('Accordion item title', 'devit')}
 					onChange={(newTitle) => setAttributes({ title: newTitle })}
 				/>
 			)}
@@ -24,12 +24,12 @@ export default function Edit({
 				<RichText
 					tagName="p"
 					value={content}
-					placeholder={__('Item content', 'devit')}
+					placeholder={__('Accordion item content', 'devit')}
 					onChange={(newContent) =>
 						setAttributes({ content: newContent })
 					}
 				/>
 			)}
-		</li>
+		</div>
 	);
 }

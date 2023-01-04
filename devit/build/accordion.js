@@ -31,13 +31,6 @@ function Edit(props) {
     },
     clientId
   } = props;
-  const innerBlockCount = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select('core/block-editor').getBlock(clientId).innerBlocks);
-  const appenderToUse = () => {
-    if (innerBlockCount.length < 10) {
-      return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks.DefaultBlockAppender, null);
-    }
-    return false;
-  };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     tagName: "h3",
     placeholder: "Accordion Title",
@@ -46,12 +39,11 @@ function Edit(props) {
     onChange: newText => setAttributes({
       title: newText
     })
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-    className: "inner-content"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "accordionBody"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, {
     allowedBlocks: ['devit/accordion-item'],
-    template: [['devit/accordion-item']],
-    renderAppender: () => appenderToUse()
+    template: [['devit/accordion-item']]
   })));
 }
 
